@@ -8,11 +8,9 @@ For questions or discussions, please open an issue.
 
 # Contributing to SDKs
 
-Each language's SDK has it's own codebase, they welcome contributions too.
+Each language's SDK has it's own codebase. Contributions are welcome.
 
-Please check issues in the SDK codebase, pick one or create one for the feature you'd like to work on.
-
-Please put a link to the feature specification docuemnt in the issue description if you created new issue, for example: https://github.com/diem/client-sdk-python/issues/202.
+Before you start work on a new feature, please check the project's issues. Pick one and comment on the open issue. You can also create a new issue for the feature you'd like to work on. Please put a link to the feature specification document in the issue description when creating a new issue, for example: https://github.com/diem/client-sdk-python/issues/202.
 
 
 ## Contributor License Agreement (CLA)
