@@ -109,7 +109,7 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 
 
 [p201]: https://github.com/diem/client-sdk-python/issues/201
-[j202]: https://github.com/diem/client-sdk-python/issues/202
+[p202]: https://github.com/diem/client-sdk-python/issues/202
 
 [j68]: https://github.com/diem/client-sdk-java/issues/68
 [j69]: https://github.com/diem/client-sdk-java/issues/69
