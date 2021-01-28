@@ -6,7 +6,9 @@ This codebase keeps track of [specifications](specs) and status for Diem Client 
 
 Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
-| Module                             | [Python][l1]                                    | [Java][l2]             | [Go-lang][l3]          | Rust                  | TypeScript      | C#          | C++                                 |
+The following status dashboard is module/feature development status for each language SDK / library.
+
+| Module                             | [Python][l1]                                    | [Java][l2]             | [Go][l3]               | Rust                  | TypeScript      | C#          | C++                                 |
 |------------------------------------|-------------------------------------------------|------------------------|------------------------|-----------------------|-----------------|-------------|-------------------------------------|
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
 | [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
@@ -16,7 +18,7 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 | [Faucet Client][6]                 | :sunny:                                         | :partly\_sunny:        | :partly\_sunny:        | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
 | [Packaging][7]                     | :sunny:                                         | :sunny:                | :sunny:                | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Verifying Client][8]              | :ice\_cube: [#201][p201]                        | :ice\_cube: [#68][j68] | :ice\_cube: [#38][g38] | :cloud: ![anomalroil] | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
-| [Mini Wallet][9]                   | :ice\_cube: ![xli]                              | :ice\_cube: [#70][j70] | :ice\_cube: [#37][g37] | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
+| [Mini Wallet][9]                   | :cloud: ![xli]                                  | :ice\_cube: [#70][j70] | :ice\_cube: [#37][g37] | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
 
 
 
@@ -25,16 +27,16 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
 ## JSON-RPC Client
 
-| Feature                              | Python          | Java            | Go-lang         | Rust        | TypeScript  |
-|--------------------------------------|-----------------|-----------------|-----------------|-------------|-------------|
-| [JSON-RPC SPEC API][c1]              | :sunny:         | :sunny:         | :sunny:         | :sunny:     | :sunny:     |
-| [Retry stale response error][c2]     | :partly\_sunny: | :partly\_sunny: | :partly\_sunny: | :sunny:     | :cloud:     |
-| [Wait for transaction execution][c3] | :sunny:         | :sunny:         | :sunny:         | :sunny:     | :sunny:     |
-| [Request strategy][c4]               | :sunny:         | :snowflake:     | :snowflake:     | :sunny:     | :snowflake: |
-| [JSON-RPC Batch API][c5]             | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:     | :snowflake: |
-| [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :snowflake: | :snowflake: |
-| [Async IO API][c7]                   | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:     | :snowflake: |
-| [User-Agent HTTP Header][c8]         | :snowflake:     | :snowflake:     | :snowflake:     | :snowflake: | :snowflake: |
+| Feature                              | [Python][pjrc]  | [Java][jjrc]    | [Go][gjrc]      | [Rust][rjrc] | TypeScript  |
+|--------------------------------------|-----------------|-----------------|-----------------|--------------|-------------|
+| [JSON-RPC SPEC API][c1]              | :sunny:         | :sunny:         | :sunny:         | :sunny:      | :sunny:     |
+| [Retry stale response error][c2]     | :partly\_sunny: | :partly\_sunny: | :partly\_sunny: | :sunny:      | :cloud:     |
+| [Wait for transaction execution][c3] | :sunny:         | :sunny:         | :sunny:         | :sunny:      | :sunny:     |
+| [Request strategy][c4]               | :sunny:         | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
+| [JSON-RPC Batch API][c5]             | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
+| [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
+| [Async IO API][c7]                   | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
+| [User-Agent HTTP Header][c8]         | :snowflake:     | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
 
 
 ## Off-chain
@@ -104,13 +106,18 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [l2]: https://github.com/diem/client-sdk-java
 [l3]: https://github.com/diem/client-sdk-go
 
+[poff]: https://github.com/diem/client-sdk-python/tree/master/src/diem/offchain
+
+[pjrc]: https://github.com/diem/client-sdk-python/tree/master/src/diem/jsonrpc
+[jjrc]: https://github.com/diem/client-sdk-java/tree/master/src/main/java/com/diem/jsonrpc
+[gjrc]: https://github.com/diem/client-sdk-go/tree/master/diemclient
+[rjrc]: https://github.com/diem/diem/tree/master/client/json-rpc
+
 [xli]: https://github.com/xli.png?size=20 "@xli"
 [bmwill]: https://github.com/bmwill.png?size=20 "@bmwill"
 [anomalroil]: https://github.com/anomalroil.png?size=20 "@anomalroil"
 [yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
 [martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
-
-[poff]: https://github.com/diem/off-chain-reference
 
 [p201]: https://github.com/diem/client-sdk-python/issues/201
 [p202]: https://github.com/diem/client-sdk-python/issues/202
