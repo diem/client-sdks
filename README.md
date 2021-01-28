@@ -6,17 +6,17 @@ This codebase keeps track of [specifications](specs) and [status](status.md) for
 
 Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
-| Module                             | Python                                 | Java            | Go-lang         | Rust                           | TypeScript      | C#          | C++                                 |
-|------------------------------------|----------------------------------------|-----------------|-----------------|--------------------------------|-----------------|-------------|-------------------------------------|
-| [BCS Runtime][1]                   | :sunny:                                | :sunny:         | :sunny:         | :sunny:                        | :partly\_sunny: | :sunny:     | :sunny:                             |
-| [Transaction Builder Generator][2] | :sunny:                                | :sunny:         | :sunny:         | :sunny:                        | :snowflake:     | :snowflake: | :partly\_sunny:                     |
-| [JSON-RPC Client][3]               | :partly\_sunny:                        | :partly\_sunny: | :partly\_sunny: | :partly\_sunny:                | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
-| [Off-chain][4]                     | :partly\_sunny: :construction\_worker: | :snowflake:     | :snowflake:     | :snowflake:                    | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Faucet Client][5]                 | :sunny:                                | :partly\_sunny: | :partly\_sunny: | :snowflake:                    | :partly\_sunny: | :snowflake: | :snowflake:                         |
-| [Packaging][6]                     | :sunny:                                | :sunny:         | :sunny:         | :cloud: :construction\_worker: | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][7]              | :snowflake:                            | :snowflake:     | :snowflake:     | :cloud: :construction\_worker: | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Multisignature][8]                | :snowflake:                            | :snowflake:     | :sunny:         | :sunny:                        | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Mini Wallet][9]                   | :cloud: :construction\_worker:         | :snowflake:     | :snowflake:     | :snowflake:                    | :snowflake:     | :snowflake: | :snowflake:                         |
+| Module                             | Python                                          | Java            | Go-lang         | Rust                  | TypeScript      | C#          | C++                                 |
+|------------------------------------|-------------------------------------------------|-----------------|-----------------|-----------------------|-----------------|-------------|-------------------------------------|
+| [BCS Runtime][1]                   | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
+| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
+| [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny: | :partly\_sunny: | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
+| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
+| [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][7]              | :snowflake:                                     | :snowflake:     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Multisignature][8]                | :snowflake:                                     | :snowflake:     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Mini Wallet][9]                   | :cloud: ![xli]                                  | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 
 
 > Rust SDK modules are developed in [Diem core codebase](https://github.com/diem/diem).
@@ -38,14 +38,14 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
 ## Off-chain
 
-| Feature                              | Python                                 | Java        | Go-lang     | Rust        | TypeScript  |
-|--------------------------------------|----------------------------------------|-------------|-------------|-------------|-------------|
-| [JWS][o1]                            | :sunny:                                | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Offchain Client][o2]                | :sunny:                                | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Data Deserialization][o3]           | :sunny:                                | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Data Validations][o4]               | :partly\_sunny: :construction\_worker: | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Payment Command][o5]                | :sunny:                                | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Fund Pull Pre-Approval Command][o6] | :cloud: :construction\_worker:         | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| Feature                              | Python                           | Java        | Go-lang     | Rust        | TypeScript  |
+|--------------------------------------|----------------------------------|-------------|-------------|-------------|-------------|
+| [JWS][o1]                            | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Offchain Client][o2]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Data Deserialization][o3]           | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Data Validations][o4]               | :partly\_sunny: ![xli]           | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Payment Command][o5]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Fund Pull Pre-Approval Command][o6] | :cloud: ![yanivmo] ![martonmaya] | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 
 
 ## Status Emoji
@@ -59,9 +59,6 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 :cloud: : MVP in development, feature incomplete.
 
 :snowflake: : frozen, feature development is not started, no one is planning or working on it.
-
-:construction\_worker: : someone (![xli] ![bmwill] ![anomalroil] ![yanivmo] ![martonmaya]) is working on the area.
-
 
 ## Contribute
 
@@ -104,8 +101,8 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [l2]: https://github.com/diem/client-sdk-java
 [l3]: https://github.com/diem/client-sdk-go
 
-[xli]: https://github.com/xli.png?size=24 "@xli"
-[bmwill]: https://github.com/bmwill.png?size=24 "@bmwill"
-[anomalroil]: https://github.com/anomalroil.png?size=24 "@anomalroil"
-[yanivmo]: https://github.com/yanivmo.png?size=24 "@yanivmo"
-[martonmaya]: https://github.com/martonmaya.png?size=24 "@martonmaya"
+[xli]: https://github.com/xli.png?size=20 "@xli"
+[bmwill]: https://github.com/bmwill.png?size=20 "@bmwill"
+[anomalroil]: https://github.com/anomalroil.png?size=20 "@anomalroil"
+[yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
+[martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
