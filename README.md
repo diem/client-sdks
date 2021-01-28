@@ -11,12 +11,12 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
 | [Transaction Builder Generator][2] | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
 | [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny: | :partly\_sunny: | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
-| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | [:snowflake: 71][j71]     | [:snowflake:][g36]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | [:snowflake: #71][j71]     | [:snowflake: #36][g36]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
 | [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][7]              | [:snowflake: 201][p201]                         | [:snowflake: 68][j68]     | [:snowflake:][g37]     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Multisignature][8]                | [:snowflake: 202][p202]      | [:snowflake: 69][j69]     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Mini Wallet][9]                   | :cloud: ![xli]                                  | [:snowflake: 70][j70]     | [:snowflake:][g39]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][7]              | [:snowflake: #201][p201]                         | [:snowflake: #68][j68]     | [:snowflake: #37][g37]     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Multisignature][8]                | [:snowflake: #202][p202]      | [:snowflake: 69][j69]     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Mini Wallet][9]                   | :cloud: ![xli]                                  | [:snowflake: #70][j70]     | [:snowflake: #38][g38]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 
 
 > Rust SDK modules are developed in [Diem core codebase](https://github.com/diem/diem).
