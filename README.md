@@ -14,9 +14,9 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 | [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
 | [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][7]              | [:snowflake: 201](https://github.com/diem/client-sdk-python/issues/201)                                     | [:snowflake:](https://github.com/diem/client-sdk-java/issues/68)     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Multisignature][8]                | [:snowflake: 202](https://github.com/diem/client-sdk-python/issues/202)                                     | [:snowflake:](https://github.com/diem/client-sdk-java/issues/69)     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Mini Wallet][9]                   | :cloud: ![xli]                                  | [:snowflake: 70](https://github.com/diem/client-sdk-java/issues/70)     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][7]              | [:snowflake: 201][p201]                         | [:snowflake: 68][j68]     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Multisignature][8]                | [:snowflake: 202][p202]      | [:snowflake: 69][j69]     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Mini Wallet][9]                   | :cloud: ![xli]                                  | [:snowflake: 70][j70]     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 
 
 > Rust SDK modules are developed in [Diem core codebase](https://github.com/diem/diem).
@@ -106,3 +106,11 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [anomalroil]: https://github.com/anomalroil.png?size=20 "@anomalroil"
 [yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
 [martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
+
+
+[p201]: https://github.com/diem/client-sdk-python/issues/201
+[j202]: https://github.com/diem/client-sdk-python/issues/202
+
+[j68]: https://github.com/diem/client-sdk-java/issues/68
+[j69]: https://github.com/diem/client-sdk-java/issues/69
+[j70]: https://github.com/diem/client-sdk-java/issues/70
