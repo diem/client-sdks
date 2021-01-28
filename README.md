@@ -2,21 +2,22 @@
 
 Diem Client SDKs is a collection of libraries and tools for creating applications integrated with Diem Payment Network.
 
-This codebase keeps track of [specifications](specs) and [status](status.md) for standard Diem Client SDK features.
+This codebase keeps track of [specifications](specs) and status for Diem Client SDKs development.
 
 Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
-| Module                             | [Python][l1]                                    | [Java][l2]      | [Go-lang][l3]   | Rust                  | TypeScript      | C#          | C++                                 |
-|------------------------------------|-------------------------------------------------|-----------------|-----------------|-----------------------|-----------------|-------------|-------------------------------------|
-| [BCS Runtime][1]                   | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
-| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
-| [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny: | :partly\_sunny: | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
-| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | [:snowflake: #71][j71]     | [:snowflake: #36][g36]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
-| [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][7]              | [:snowflake: #201][p201]                         | [:snowflake: #68][j68]     | [:snowflake: #38][g38]     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Multisignature][8]                | [:snowflake: #202][p202]      | [:snowflake: 69][j69]     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Mini Wallet][9]                   | :cloud: ![xli]                                  | [:snowflake: #70][j70]     | [:snowflake: #37][g37]     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| Module                             | [Python][l1]                                    | [Java][l2]             | [Go-lang][l3]          | Rust                  | TypeScript      | C#          | C++                                 |
+|------------------------------------|-------------------------------------------------|------------------------|------------------------|-----------------------|-----------------|-------------|-------------------------------------|
+| [BCS Runtime][1]                   | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
+| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
+| [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny:        | :partly\_sunny:        | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
+| [Multisignature][4]                | :snowflake: [#202][p202]                        | :snowflake: [#69][j69] | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Off-chain][5]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake: [#71][j71] | :snowflake: [#36][g36] | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Faucet Client][6]                 | :sunny:                                         | :partly\_sunny:        | :partly\_sunny:        | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
+| [Packaging][7]                     | :sunny:                                         | :sunny:                | :sunny:                | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][8]              | :ice\_cube: [#201][p201]                        | :ice\_cube: [#68][j68] | :ice\_cube: [#38][g38] | :cloud: ![anomalroil] | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
+| [Mini Wallet][9]                   | :ice\_cube: ![xli]                              | :ice\_cube: [#70][j70] | :ice\_cube: [#37][g37] | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
+
 
 
 > Rust SDK modules are developed in [Diem core codebase](https://github.com/diem/diem).
@@ -60,6 +61,8 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
 :snowflake: : frozen, feature development is not started, no one is planning or working on it.
 
+:ice_cube: : specification or reference implementation is working in progress, feature is not ready for development yet.
+
 ## Contribute
 
 You may send a PR for adding new feature specifications or update SDKs' development status.
@@ -71,11 +74,11 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [1]: specs/bcs_runtime.md
 [2]: specs/transaction_builder_generator.md
 [3]: #user-content-json-rpc-client
-[4]: #user-content-off-chain
-[5]: specs/faucet_client.md
-[6]: specs/packaging.md
-[7]: specs/verifying_client.md
-[8]: https://github.com/diem/diem/tree/master/specifications/crypto#multi-signatures
+[4]: https://github.com/diem/diem/tree/master/specifications/crypto#multi-signatures
+[5]: #user-content-off-chain
+[6]: specs/faucet_client.md
+[7]: specs/packaging.md
+[8]: specs/verifying_client.md
 [9]: specs/mini_wallet.md
 
 [c1]: specs/json_rpc_client.md#user-content-json-rpc-spec-api
