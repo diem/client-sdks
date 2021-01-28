@@ -6,7 +6,7 @@ This codebase keeps track of [specifications](specs) and [status](status.md) for
 
 Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
-| Module                             | [Python]l1                                      | [Java][l2]      | [Go-lang][l3]   | Rust                  | TypeScript      | C#          | C++                                 |
+| Module                             | [Python][l1]                                    | [Java][l2]      | [Go-lang][l3]   | Rust                  | TypeScript      | C#          | C++                                 |
 |------------------------------------|-------------------------------------------------|-----------------|-----------------|-----------------------|-----------------|-------------|-------------------------------------|
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
 | [Transaction Builder Generator][2] | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
