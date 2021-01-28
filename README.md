@@ -38,7 +38,7 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 
 ## Off-chain
 
-| Feature                              | Python                           | Java        | Go-lang     | Rust        | TypeScript  |
+| Feature                              | [Python][poff]                   | Java        | Go-lang     | Rust        | TypeScript  |
 |--------------------------------------|----------------------------------|-------------|-------------|-------------|-------------|
 | [JWS][o1]                            | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 | [Offchain Client][o2]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
@@ -107,6 +107,7 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
 [martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
 
+[poff]: https://github.com/diem/off-chain-reference
 
 [p201]: https://github.com/diem/client-sdk-python/issues/201
 [p202]: https://github.com/diem/client-sdk-python/issues/202
