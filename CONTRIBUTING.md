@@ -10,7 +10,11 @@ For questions or discussions, please open an issue.
 
 Each language's SDK has it's own codebase. Contributions are welcome.
 
-Before you start work on a new feature, please check the project's issues. Pick one and comment on the open issue. You can also create a new issue for the feature you'd like to work on. Please put a link to the feature specification document in the issue description when creating a new issue, for example: https://github.com/diem/client-sdk-python/issues/202.
+Before you start work on a new feature, please check the project's issues.
+
+You may pick one and comment on the open issue to let folks know you're workin on the item.
+
+You may also create a new issue for a feature that you'd like to work on if it's not listed in the README. When adding a new issue, include a link to the feature specification document in the issue description. Example: https://github.com/diem/client-sdk-python/issues/202.
 
 
 ## Contributor License Agreement (CLA)
