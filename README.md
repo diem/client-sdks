@@ -11,7 +11,7 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
 | [Transaction Builder Generator][2] | :sunny:                                         | :sunny:         | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
 | [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny: | :partly\_sunny: | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
-| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | [:snowflake: 71][j71]     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
 | [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Verifying Client][7]              | [:snowflake: 201][p201]                         | [:snowflake: 68][j68]     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
@@ -114,3 +114,4 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [j68]: https://github.com/diem/client-sdk-java/issues/68
 [j69]: https://github.com/diem/client-sdk-java/issues/69
 [j70]: https://github.com/diem/client-sdk-java/issues/70
+[j71]: https://github.com/diem/client-sdk-java/issues/71
