@@ -14,8 +14,8 @@ Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
 | [Off-chain][4]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Faucet Client][5]                 | :sunny:                                         | :partly\_sunny: | :partly\_sunny: | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
 | [Packaging][6]                     | :sunny:                                         | :sunny:         | :sunny:         | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][7]              | [:snowflake:](https://github.com/diem/client-sdk-python/issues/201)                                     | :snowflake:     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Multisignature][8]                | [:snowflake:](https://github.com/diem/client-sdk-python/issues/202)                                     | :snowflake:     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][7]              | [:snowflake: 201](https://github.com/diem/client-sdk-python/issues/201)                                     | :snowflake:     | :snowflake:     | :cloud: ![anomalroil] | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Multisignature][8]                | [:snowflake: 202](https://github.com/diem/client-sdk-python/issues/202)                                     | :snowflake:     | :sunny:         | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Mini Wallet][9]                   | :cloud: ![xli]                                  | :snowflake:     | :snowflake:     | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
 
 
