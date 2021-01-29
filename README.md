@@ -1,20 +1,15 @@
 # Diem Client SDKs
 
 Diem Client SDKs is a collection of libraries and tools for creating applications integrated with Diem Payment Network.
-The goal of client SDK is providing native language support for all aspects of integration with Diem Payment Network, off-chain and onchain.
+The goal of client SDK is to provide native language support for all aspects of integrations, communications, and protocols in the Diem ecosystem.
 
 ![Diem Payment Network Integration Overview](overview.png)
 
 
-## Development status
+This codebase keeps track of [SDK feature specifications](specs) and status for Diem Client SDKs development.
 
-This codebase keeps track of [specifications](specs) and status for Diem Client SDKs development.
 
-Open sourced client SDKs: [Python][l1] [Java][l2] [Go-lang][l3]
-
-The following status dashboard is module/feature development status for each language SDK / library.
-
-| Module                             | [Python][l1]                                    | [Java][l2]             | [Go][l3]               | Rust                  | TypeScript      | C#          | C++                                 |
+| Module                             | [Python][l1]                                    | [Java][l2]             | [Go][l3]               | [Rust][l4]            | TypeScript      | C#          | C++                                 |
 |------------------------------------|-------------------------------------------------|------------------------|------------------------|-----------------------|-----------------|-------------|-------------------------------------|
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
 | [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
@@ -25,10 +20,6 @@ The following status dashboard is module/feature development status for each lan
 | [Packaging][7]                     | :sunny:                                         | :sunny:                | :sunny:                | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Verifying Client][8]              | :ice\_cube: [#201][p201]                        | :ice\_cube: [#68][j68] | :ice\_cube: [#38][g38] | :cloud: ![anomalroil] | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
 | [Mini Wallet][9]                   | :cloud: ![xli]                                  | :ice\_cube: [#70][j70] | :ice\_cube: [#37][g37] | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
-
-
-
-> Rust SDK modules are developed in [Diem core codebase](https://github.com/diem/diem).
 
 
 ## JSON-RPC Client
@@ -111,6 +102,7 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [l1]: https://github.com/diem/client-sdk-python
 [l2]: https://github.com/diem/client-sdk-java
 [l3]: https://github.com/diem/client-sdk-go
+[l4]: https://github.com/diem/diem/tree/master/client
 
 [poff]: https://github.com/diem/client-sdk-python/tree/master/src/diem/offchain
 
