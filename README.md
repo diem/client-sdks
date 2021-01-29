@@ -1,6 +1,12 @@
 # Diem Client SDKs
 
 Diem Client SDKs is a collection of libraries and tools for creating applications integrated with Diem Payment Network.
+The goal of client SDK is providing native language support for all aspects of integration with Diem Payment Network, off-chain and onchain.
+
+![Diem Payment Network Integration Overview](overview.md)
+
+
+## Development status
 
 This codebase keeps track of [specifications](specs) and status for Diem Client SDKs development.
 
