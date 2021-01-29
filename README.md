@@ -9,17 +9,17 @@ The goal of client SDK is to provide native language support for all aspects of 
 This codebase keeps track of [SDK feature specifications](specs) and status for Diem Client SDKs development.
 
 
-| Module                             | [Python][l1]                                    | [Java][l2]             | [Go][l3]               | [Rust][l4]            | TypeScript      | C#          | C++                                 |
-|------------------------------------|-------------------------------------------------|------------------------|------------------------|-----------------------|-----------------|-------------|-------------------------------------|
-| [BCS Runtime][1]                   | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
-| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
-| [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny:        | :partly\_sunny:        | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
-| [Multisignature][4]                | :snowflake: [#202][p202]                        | :snowflake: [#69][j69] | :sunny:                | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Off-chain][5]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake: [#71][j71] | :snowflake: [#36][g36] | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Faucet Client][6]                 | :sunny:                                         | :partly\_sunny:        | :partly\_sunny:        | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
-| [Packaging][7]                     | :sunny:                                         | :sunny:                | :sunny:                | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
-| [Verifying Client][8]              | :ice\_cube: [#201][p201]                        | :ice\_cube: [#68][j68] | :ice\_cube: [#38][g38] | :cloud: ![anomalroil] | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
-| [Mini Wallet][9]                   | :cloud: ![xli]                                  | :ice\_cube: [#70][j70] | :ice\_cube: [#37][g37] | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
+| Module                             | [Python][l1]                                    | [Java][l2]                        | [Go][l3]                          | [Rust][l4]            | TypeScript      | C#          | C++                                 |
+|------------------------------------|-------------------------------------------------|-----------------------------------|-----------------------------------|-----------------------|-----------------|-------------|-------------------------------------|
+| [BCS Runtime][1]                   | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
+| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
+| [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny:                   | :partly\_sunny:                   | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
+| [Multisignature][4]                | :snowflake: <sup>[#202][p202]</sup>             | :snowflake: <sup>[#69][j69]</sup> | :sunny:                           | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Off-chain][5]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake: <sup>[#71][j71]</sup> | :snowflake: <sup>[#36][g36]</sup> | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Faucet Client][6]                 | :sunny:                                         | :partly\_sunny:                   | :partly\_sunny:                   | :snowflake:           | :partly\_sunny: | :snowflake: | :snowflake:                         |
+| [Packaging][7]                     | :sunny:                                         | :sunny:                           | :sunny:                           | :cloud: ![bmwill]     | :snowflake:     | :snowflake: | :snowflake:                         |
+| [Verifying Client][8]              | :ice\_cube: <sup>[#201][p201]</sup>             | :ice\_cube: <sup>[#68][j68]</sup> | :ice\_cube: <sup>[#38][g38]</sup> | :cloud: ![anomalroil] | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
+| [Mini Wallet][9]                   | :cloud: ![xli]                                  | :ice\_cube: <sup>[#70][j70]</sup> | :ice\_cube: <sup>[#37][g37]</sup> | :ice\_cube:           | :ice\_cube:     | :ice\_cube: | :ice\_cube:                         |
 
 
 ## JSON-RPC Client
