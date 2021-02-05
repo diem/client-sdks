@@ -9,10 +9,10 @@ The goal of client SDK is to provide native language support for all aspects of 
 This codebase keeps track of [SDK feature specifications](specs) and status for Diem Client SDKs development.
 
 
-| Module                             | [Python][l1]                                    | [Java][l2]                        | [Go][l3]                          | [Rust][l4]            | TypeScript      | C#          | C++                                 |
+| Module                             | [Python][l1]                                    | [Java][l2]                        | [Go][l3]                          | [Rust][l4]            | [TypeScript][l5]      | [C#][l6]          | [C++][l7]                                 |
 |------------------------------------|-------------------------------------------------|-----------------------------------|-----------------------------------|-----------------------|-----------------|-------------|-------------------------------------|
-| [BCS Runtime][1]                   | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: | :sunny:     | :sunny:                             |
-| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :snowflake:     | :snowflake: | :partly\_sunny:                     |
+| [BCS Runtime][1]                   | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: ![joelmarcey] | :sunny: ![joelmarcey]    | :sunny:                             |
+| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :snowflake: ![joelmarcey]    | :snowflake: ![joelmarcey] | :partly\_sunny:                     |
 | [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny:                   | :partly\_sunny:                   | :partly\_sunny:       | :partly\_sunny: | :snowflake: | :cloud\_with\_lightning\_and\_rain: |
 | [Multisignature][4]                | :snowflake: <sup>[#202][p202]</sup>             | :snowflake: <sup>[#69][j69]</sup> | :sunny:                           | :sunny:               | :snowflake:     | :snowflake: | :snowflake:                         |
 | [Off-chain][5]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake: <sup>[#71][j71]</sup> | :snowflake: <sup>[#36][g36]</sup> | :snowflake:           | :snowflake:     | :snowflake: | :snowflake:                         |
@@ -103,6 +103,9 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [l2]: https://github.com/diem/client-sdk-java
 [l3]: https://github.com/diem/client-sdk-go
 [l4]: https://github.com/diem/diem/tree/master/client
+[l5]: https://github.com/diem/client-sdk-typescript
+[l6]: https://github.com/diem/client-sdk-csharp
+[l7]: https://github.com/diem/client-sdk-cplusplus
 
 [poff]: https://github.com/diem/client-sdk-python/tree/master/src/diem/offchain
 
@@ -116,6 +119,7 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [anomalroil]: https://github.com/anomalroil.png?size=20 "@anomalroil"
 [yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
 [martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
+[joelmarcey]: http://github.com/joelmarcey.png?size=20 "@joelmarcey"
 
 [p201]: https://github.com/diem/client-sdk-python/issues/201
 [p202]: https://github.com/diem/client-sdk-python/issues/202
