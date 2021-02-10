@@ -33,7 +33,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | [JSON-RPC Batch API][c5]             | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 | [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
 | [Async IO API][c7]                   | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
-| [User-Agent HTTP Header][c8]         | :snowflake:     | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
+| [User-Agent HTTP Header][c8]         | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:  | :snowflake: |
 
 
 ## Off-chain
