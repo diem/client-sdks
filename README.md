@@ -43,7 +43,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | [JWS][o1]                            | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 | [Offchain Client][o2]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 | [Data Deserialization][o3]           | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Data Validations][o4]               | :partly\_sunny: ![xli]           | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Data Validations][o4]               | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 | [Payment Command][o5]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 | [Fund Pull Pre-Approval Command][o6] | :cloud: ![yanivmo] ![martonmaya] | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 
