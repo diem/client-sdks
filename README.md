@@ -12,7 +12,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | Module                             | [Python][l1]                                    | [Java][l2]                        | [Go][l3]                          | [Rust][l4]            | [TypeScript][l5]              | [C#][l6]                  | [C++][l7]                           |
 |------------------------------------|-------------------------------------------------|-----------------------------------|-----------------------------------|-----------------------|-------------------------------|---------------------------|-------------------------------------|
 | [BCS Runtime][1]                   | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: ![joelmarcey] | :sunny: ![joelmarcey]     | :sunny:                             |
-| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: ![joelmarcey]     | :snowflake: ![joelmarcey] | :partly\_sunny:                     |
+| [Transaction Builder Generator][2] | :sunny:                                         | :sunny:                           | :sunny:                           | :sunny:               | :partly\_sunny: ![joelmarcey] | :snowflake: ![joelmarcey] | :partly\_sunny:                     |
 | [JSON-RPC Client][3]               | :partly\_sunny:                                 | :partly\_sunny:                   | :partly\_sunny:                   | :partly\_sunny:       | :partly\_sunny:               | :snowflake:               | :cloud\_with\_lightning\_and\_rain: |
 | [Multisignature][4]                | :snowflake: <sup>[#202][p202]</sup>             | :snowflake: <sup>[#69][j69]</sup> | :sunny:                           | :sunny:               | :snowflake:                   | :snowflake:               | :snowflake:                         |
 | [Off-chain][5]                     | :partly\_sunny: ![xli] ![yanivmo] ![martonmaya] | :snowflake: <sup>[#71][j71]</sup> | :snowflake: <sup>[#36][g36]</sup> | :snowflake:           | :snowflake:                   | :snowflake:               | :snowflake:                         |
@@ -33,7 +33,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | [JSON-RPC Batch API][c5]             | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 | [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
 | [Async IO API][c7]                   | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
-| [User-Agent HTTP Header][c8]         | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
+| [User-Agent HTTP Header][c8]         | :sunny:         | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 
 
 ## Off-chain
@@ -120,6 +120,7 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [yanivmo]: https://github.com/yanivmo.png?size=20 "@yanivmo"
 [martonmaya]: https://github.com/martonmaya.png?size=20 "@martonmaya"
 [joelmarcey]: https://github.com/joelmarcey.png?size=20 "@joelmarcey"
+[max]: https://github.com/CapCap.png?size=20 "@CapCap"
 
 [p201]: https://github.com/diem/client-sdk-python/issues/201
 [p202]: https://github.com/diem/client-sdk-python/issues/202
