@@ -1,13 +1,16 @@
 # Diem MiniWallet
 
-MiniWallet is a highly simplified wallet application backend server that integrates with Diem Payment Network.
+MiniWallet is a highly simplified wallet application backend service API.
+
+The API is a minimum interface for wallet applications to do peer to peer payment.
 
 
 ## Goals
 
 1. Demonstrate SDK features for integrating an application with Diem Payment Network.
-2. Play as counterparty wallet application for wallet applications CI builds, and develop a standard test suite for Diem wallet applications.
-3. Develop a standard test suite for testing cross-language SDKs features.
+2. Play as counterparty wallet application for wallet applications CI builds.
+3. Develop a standard test suite for improving the ramp-up time of building Diem wallet applications.
+4. Develop a standard test suite for testing cross-language SDKs features.
 
 
 ## Use Cases
@@ -19,125 +22,154 @@ MiniWallet is a highly simplified wallet application backend server that integra
 
 The MiniWallet API is organized around [REST], accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes and verbs.
 
-We value simplicity in favor of performance in MiniWallet API design.
+We value simplicity in favor of performance in MiniWallet API design. Providing a minimum HTTP interface is key to achieve goals.
 
 
-### Errors
+### Endpoints Overview
 
-MiniWallet responses 400 for client error, 404 for entity is not found,  and 500 for server internal error.
+1. Server responses 200 for succeeded request.
+2. For `POST` creation request, server should accept JSON encoded request body, and response created resource JSON as the body of the response; no `Location` header is required.
+3. Server should set `Content-Type` header to `application/json` for JSON responses.
+4. Server should respond 400 for client error,  and 500 for server internal error.
+5. There is no requirement about the response body for errors; recommend human readable messages and stack traces for easy debugging.
 
-There is no requirement about the response body for errors; recommend human readable messages and stack traces for easy debugging.
+
+Minimum Endpoints
+
+| Method | Path                                 | Request Body | Response Code | Response Body | Description                                                                 |
+|--------|--------------------------------------|--------------|---------------|---------------|-----------------------------------------------------------------------------|
+| POST   | `/accounts`                          | Account      | 201 Created   | Account       | Create a new account with KYC data and initial deposit balances.            |
+| GET    | `/accounts/:account_id/balances`     | N/A          | 200 OK        | Balances      | Returns account balances. Should check Diem incoming txns and include them. |
+| POST   | `/accounts/:account_id/payment_uris` | PaymentURI   | 201 Created   | PaymentURI    | Create and return a [Payment URI] for receiving payment.                    |
+| POST   | `/accounts/:account_id/payments`     | Payment      | 202 Accepted  | Payment       | Send a payment to a payee.                                                  |
 
 
-### Endpoints
+Offchain PaymentCommand Test Required Endpoint
 
-| Method | Path                            | Description                                                           |
-|--------|---------------------------------|-----------------------------------------------------------------------|
-| GET    | /accounts                       | Returns all accounts.                                                 |
-| POST   | /accounts                       | Create a new account.                                                 |
-| GET    | /accounts/:id/transactions      | Returns all account transactions.                                     |
-| GET    | /accounts/:id/payments          | Returns all payments.                                                 |
-| POST   | /accounts/:id/payments          | Create a payment that is paid by the account to a payee.              |
-| POST   | /accounts/:id/receive_payment   | Generate and return a new [Account Identifier] for receiving payment. |
-| GET    | /accounts/:id/commands          | Returns all account off-chain commands.                               |
-| PUT    | /accounts/:id/commands/:id      | Update an account command by id. Invalid command should be accepted.  |
-| POST   | /accounts/:id/commands/:id/sync | Make an outbound call to counterparty service off-chain API endpoint. |
-| POST   | /offchain/v2/command            | Diem Off-chain API. Please refer to [DIP-1] for the API details.      |
+| Method | Path          | Request Body | Response Code | Response Body | Description                                         |
+|--------|---------------|--------------|---------------|---------------|-----------------------------------------------------|
+| GET    | `/kyc_sample` | N/A          | 200 OK        | KycSample     | Returns [KycSample] for clients to use in the test. |
 
-> `POST /accounts/:id/receive_payment` returns the generated [Account Identifier] JSON-encoded string as the response body.
 
-> For the case POST creates a new resource, server accepts the new resource JSON-encoded string as request body, then responses code 201 (Created) and a `Location` header field that provides the URL of the resource created.
+Optional Debugging APIs:
 
-> For the case PUT updates a resource successfully, server responses code 200 (Ok). Returning the updated resource as JSON is optional.
+| Method | Path                           | Request Body | Response Code | Response Body | Description                                                                          |
+|--------|--------------------------------|--------------|---------------|---------------|--------------------------------------------------------------------------------------|
+| GET    | `/accounts/:account_id/events` | N/A          | 200 OK        | List<Event>   | Returns all events happened in the system for the account, ordered by creation time. |
 
-> Server should set `Content-Type` header value `application/json` for JSON responses.
 
-> It is optional to accept a form-encoded request body.
-
+Offchain API Endpoint: see [Diem Off-chain API] endpoint requirement.
 
 ### Resources
 
+`Type` column flags:
+1. `?`: nullable field
+2. `!`: read-only field. It may be sent as part of a response but SHOULD NOT be sent as part of the request.
+3. `*`: write-only field. It may be sent as part of a request but SHOULD NOT be sent as part of the response.
+
+Reference resource id by the format: `<snake_case_resource_name>_id`, for example: `account_id` means `Account` resource `id` attribute value.
+
+
 #### Account
 
-Account is a record of payment activities and transactions.
+Account holds KYC data, and all other resources are scoped by account id.
 
-| Attribute                  | Type   | Description                                                                                |
-|----------------------------|--------|--------------------------------------------------------------------------------------------|
-| id                         | string | Unique account id                                                                          |
-| initial\_deposit\_currency | string | Diem currency code of the initial deposit.                                                 |
-| initial\_deposit\_amount   | uint   | The amount of initial deposit.                                                             |
-| kyc\_data                  | string | Data will be deserialized into JSON objects and set [PaymentActorObject] `kyc_data` field. |
+| Attribute  | Type                | Description                                                              |
+|------------|---------------------|--------------------------------------------------------------------------|
+| `id`       | string!             | Id generated by server for this account resource.                        |
+| `kyc_data` | string              | Valid [KycDataObject] JSON-encoded string.                               |
+| `balances` | map[string, uint]?* | Balance amount per currency code. Currency code is key, amount is value. |
 
-> Set `kyc_data` value to a valid [KycDataObject] serialized JSON string for exchanging KYC Data successfully.
-
-> Set `kyc_data` to an invalid [KycDataObject], like missing a required field, for testing error handlings of the counterparty service off-chain API.
-
-> Use account `id` as `additional_kyc_data` if it is requested by the counterparty service.
+> Server should send the account id as `additional_kyc_data`, if it is requested by the counterparty service
 
 
-#### Transaction
+#### Balances
 
-Transaction represents funds moving through a Mini Wallet account.
+Account balances is a map of currency code to amount.
+We can also consider it is an object has attributes named by currency code like the followings:
 
-It is created when:
-
-1. An [account](#account) creation request succeeds with above zero initial deposit amount.
-2. A [payment](#payment) is sent or received successfully from Diem on-chain transaction.
-
-> Execution failed Diem transactions should not be converted into transactions.
-
-> Account balance is the sum amounts of the account transactions by currency. Account balance should not be less than zero.
-
-> For one currency, the sum of all accounts' transaction amounts should not exceed the sum of all VASP on-chain account amounts.
+| Attribute | Type  | Description               |
+|-----------|-------|---------------------------|
+| `XUS`     | uint! | Amount of `XUS` currency. |
+| `XDX`     | uint! | Amount of `XDX` currency. |
 
 
-| Attribute                  | Type   | Description                                                  |
-|----------------------------|--------|--------------------------------------------------------------|
-| id                         | string | Unique identifier                                            |
-| currency                   | string | Diem currency code.                                          |
-| amount                     | int    | Amount of the transaction, negative is debit to the account. |
-| type                       | enum   | One of values: `payment`, `deposit`                          |
-| diem\_transaction\_version | uint   | set if the transaction has an associated Diem transaction.   |
-| payment\_id                | string | set if the transaction is from a payment.                    |
 
-> Use int 128 if preallocate is required for the `amount` field.
+#### Payment URI
+
+Payment URI is used for receiving payment from payers.
+
+
+| Attribute     | Type    | Description                                    |
+|---------------|---------|------------------------------------------------|
+| `id`          | string! | Id of this resource, maybe used in event data. |
+| `account_id`  | string! | Id of associated account resource              |
+| `currency`    | string? | Currency code of the payment.                  |
+| `amount`      | string? | Amount of the payment.                         |
+| `payment_uri` | string! | [Payment URI] for receiving the payment.       |
 
 
 #### Payment
 
-Payment records an intent to send funds from an account to a payee.
+Payment resource is a record of sending funds from the account to the payee's account.
 
-| Attribute  | Type        | Description                              |
-|------------|-------------|------------------------------------------|
-| id         | string      | Unique identifier                        |
-| currency   | string      | Diem currency code                       |
-| amount     | uint        | Amount of the payment                    |
-| payee      | string      | [Account Identifier], or [Diem ID].      |
-
-
-#### Command
-
-Command represents the Diem off-chain command object.
-
-It is created when:
-1. a payment requiring off-chain data exchange is created.
-2. a valid off-chain command request is received from counterparty service.
+| Attribute    | Type    | Description                                                          |
+|--------------|---------|----------------------------------------------------------------------|
+| `id`         | string! | Id of this resource, maybe used in event data.                       |
+| `account_id` | string! | Id of associated account resource                                    |
+| `currency`   | string  | Diem currency code.                                                  |
+| `amount`     | uint    | Amount of the transaction.                                           |
+| `payee`      | string  | [Diem Account Identifier], the receiver of the payment. |
 
 
-| Attribute   | Type        | Description                                    |
-|-------------|-------------|------------------------------------------------|
-| id          | string      | Unique identifier                              |
-| command     | string      | JSON-serialized Diem off-chain command object. |
+#### Kyc Sample
 
-> Field `id` is not the `cid` of the command object, because the command `cid` may be duplicated when testing invalid commands.
-> Field `command` is a JSON string, because we should accept invalid off-chain command objects, thus the field structure is unknown.
-> For decoded `command` object definitions, please refer to the related DIP document.
+KYC data sample for clients to create accounts to do off-chain KYC data exchanging tests.
+The `minimum` sample will be used for generating KYC data in happy path test cases.
+`Reject`, `soft_match`, `soft_reject` are used for the test cases that need trigger rejection or soft match PaymentCommand.
+
+| Attribute     | Type    | Description                   |
+|---------------|---------|-------------------------------|
+| `minimum`     | string! | JSON-encoded [KycDataObject]. |
+| `reject`      | string! | JSON-encoded [KycDataObject]. |
+| `soft_match`  | string! | JSON-encoded [KycDataObject]. |
+| `soft_reject` | string! | JSON-encoded [KycDataObject]. |
 
 
+#### Event
+
+Event is optional to implement, it is a log of what happened in the system.
+
+
+| Attribute    | Type    | Description                                                                        |
+|--------------|---------|------------------------------------------------------------------------------------|
+| `id`         | string! | Unique identifier of the event                                                     |
+| `account_id` | string! | Id of associated account resource                                                  |
+| `type`       | string! | Event type                                                                         |
+| `data`       | string! | Event data should be interpreted based on the `type`. See the event types details. |
+| `timestamp`  | uint!   | Milliseconds since the unix epoch. The time event object is created by the system. |
+
+
+Event types Python SDK MiniWallet implementation plan to provide:
+
+| Event Type                | Data Attr Type | Description                                                                                  |
+|---------------------------|----------------|----------------------------------------------------------------------------------------------|
+| `info`                    | string         | Human readable message for whatever happened.                                                |
+| `error`                   | string         | Human readable error messages.                                                               |
+| `created_account`         | JSON           | Account resource attributes.                                                                 |
+| `created_transaction`     | JSON           | Incoming or outgoing transaction information.                                                |
+| `updated_transaction`     | JSON           | Outgoing transaction updated data when Diem transaction is created, submitted and executed . |
+| `created_payment_uri`     | JSON           | PaymentURI resource attributes.                                                              |
+| `created_payment_command` | JSON           | Off-chain payment command data with cid and reference_id.                                    |
+| `updated_payment_command` | JSON           | Off-chain payment command data with cid and reference_id                                     |
+
+
+[KycSample]: #kyc-sample
 [REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
-[DIP-1]: https://dip.diem.com/dip-1
-[Account Identifier]: https://dip.diem.com/dip-5/#account-identifiers
-[Diem ID]: https://dip.diem.com/dip-10
-[KYC Data]: https://en.wikipedia.org/wiki/Know_your_customer
+[Diem Account Identifier]: https://dip.diem.com/dip-5/#account-identifiers
 [KycDataObject]: https://dip.diem.com/dip-1/#kycdataobject
+[PaymentCommand]: https://dip.diem.com/dip-1/#paymentcommand-object
 [PaymentActorObject]: https://dip.diem.com/dip-1/#paymentactorobject
+[CommandRequestObject]: https://dip.diem.com/dip-1/#commandrequestobject
+[Diem Off-chain API]: https://dip.diem.com/dip-1
+[Payment URI]: https://dip.diem.com/dip-5/#intent-identifiers
