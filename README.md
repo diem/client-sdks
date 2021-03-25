@@ -19,7 +19,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | [Faucet Client][6]                 | :sunny:                                         | :partly\_sunny:                   | :partly\_sunny:                   | :snowflake:           | :partly\_sunny:               | :snowflake:               | :snowflake:                         |
 | [Packaging][7]                     | :sunny:                                         | :sunny:                           | :sunny:                           | :cloud: ![bmwill]     | :snowflake:                   | :snowflake:               | :snowflake:                         |
 | [Verifying Client][8]              | :ice\_cube: <sup>[#201][p201]</sup>             | :ice\_cube: <sup>[#68][j68]</sup> | :ice\_cube: <sup>[#38][g38]</sup> | :cloud: ![anomalroil] | :ice\_cube:                   | :ice\_cube:               | :ice\_cube:                         |
-| [Mini Wallet][9]                   | :cloud: ![xli]                                  | :ice\_cube: <sup>[#70][j70]</sup> | :ice\_cube: <sup>[#37][g37]</sup> | :ice\_cube:           | :ice\_cube:                   | :ice\_cube:               | :ice\_cube:                         |
+| [Mini Wallet][9]                   | :sunny:                                         | :ice\_cube: <sup>[#70][j70]</sup> | :ice\_cube: <sup>[#37][g37]</sup> | :ice\_cube:           | :ice\_cube:                   | :ice\_cube:               | :ice\_cube:                         |
 
 
 ## JSON-RPC Client
