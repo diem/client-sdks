@@ -40,12 +40,14 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 
 | Feature                              | [Python][poff]                   | Java        | Go-lang     | Rust        | TypeScript  |
 |--------------------------------------|----------------------------------|-------------|-------------|-------------|-------------|
-| [JWS][o1]                            | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [JWS][o1]                            | :sunny:                          | :snowflake: | :snowflake: | :sunny:     | :snowflake: |
 | [Offchain Client][o2]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Data Deserialization][o3]           | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Data Validations][o4]               | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
-| [Payment Command][o5]                | :sunny:                          | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Data Deserialization][o3]           | :sunny:                          | :snowflake: | :snowflake: | :sunny:     | :snowflake: |
+| [Data Validations][o4]               | :sunny:                          | :snowflake: | :snowflake: | :sunny:     | :snowflake: |
+| [Payment Command][o5]                | :sunny:                          | :snowflake: | :snowflake: | :sunny:     | :snowflake: |
 | [Fund Pull Pre-Approval Command][o6] | :cloud: ![yanivmo] ![martonmaya] | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [Ping Command][o7].                  | :snowflake: ![xli]               | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
+| [ReferenceID Command][o8]            | :snowflake:                      | :snowflake: | :snowflake: | :snowflake: | :snowflake: |
 
 
 ## Status Emoji
@@ -98,6 +100,8 @@ See [CONTRIBUTING](CONTRIBUTING.md) for more details.
 [o4]: specs/off_chain.md#user-content-data-validations
 [o5]: specs/off_chain.md#user-content-payment-command
 [o6]: specs/off_chain.md#user-content-fund-pull-pre-approval-command
+[o7]: https://github.com/diem/dip/blob/main/dips/dip-160.md
+[o8]: https://github.com/diem/dip/blob/main/dips/dip-10.md
 
 [l1]: https://github.com/diem/client-sdk-python
 [l2]: https://github.com/diem/client-sdk-java
