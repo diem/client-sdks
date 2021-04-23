@@ -9,7 +9,7 @@ The client supports all APIs listed in [JSON-RPC API SPEC][1], and the response 
 You can use [jsonrpc.proto][3] to generate response data type code by [protobuf][4], then use protobuf json format parser to deserialize response types. The implementation various depending on the language; one caveat is protobuf json format parser does not support deserializing json array by default, you need handle it by yourself. See python or Java SDK client implementation for example.
 
 
-## Retry stale response error for get APIs
+## Get APIs should retry stale response error
 
 A stale response error should be raised by a client if it founds the server response data is not newer than the version the client knows before making the request.
 
@@ -28,7 +28,7 @@ In any case, if we arrive at an older version:
 
 All Diem JSON-RPC APIs response server latest ledger version by [http headers](https://github.com/diem/diem/blob/master/json-rpc/json-rpc-spec.md#http-response-headers-extensions) for client to know server ledger version and timestamp.
 
-### Should ignore stale response error for submit transaction API
+### Submit transaction API should ignore stale response error
 
 Re-submit any transaction may get JsonRpcError `SEQUENCE_NUMBER_TOO_OLD` in multi-threads/concurrent environment, for example:
 
