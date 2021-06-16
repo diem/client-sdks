@@ -31,7 +31,7 @@ This codebase keeps track of [SDK feature specifications](specs) and status for 
 | [Wait for transaction execution][c3] | :sunny:         | :sunny:         | :sunny:         | :sunny:      | :sunny:     |
 | [Request strategy][c4]               | :sunny:         | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 | [JSON-RPC Batch API][c5]             | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
-| [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :snowflake:  | :snowflake: |
+| [Off-chain resource query APIs][c6]  | :sunny:         | :snowflake:     | :snowflake:     | :cloud: ![dimroc] | :snowflake: |
 | [Async IO API][c7]                   | :snowflake:     | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 | [User-Agent HTTP Header][c8]         | :sunny:         | :snowflake:     | :snowflake:     | :sunny:      | :snowflake: |
 
